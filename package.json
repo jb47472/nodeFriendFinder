@@ -1,0 +1,23 @@
+{
+  "name": "nodefriendfinder",
+  "version": "1.0.0",
+  "description": "Friend Finder",
+  "main": "server.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "node server.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/jb47472/nodeFriendFinder.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/jb47472/nodeFriendFinder/issues"
+  },
+  "homepage": "https://github.com/jb47472/nodeFriendFinder#readme",
+  "dependencies": {
+    "express": "^4.16.4"
+  }
+}
