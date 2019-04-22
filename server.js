@@ -1,6 +1,6 @@
 
 var express = require("express");
-
+var path = require("path");
 
 
 var app = express();
@@ -10,16 +10,12 @@ var PORT = process.env.PORT || 8080;
 app.use(express.urlencoded({ extended: true }));
 app.use(express.json());
 
-// ================================================================================
-// ROUTER
-// The below points our server to a series of "route" files.
-// These routes give our server a "map" of how to respond when users visit or request data from various URLs.
-// ================================================================================
+// Requires and Sets Routes for API
+require("./app/routing/apiRoutes")(app);
+// Requires and Sets Routes for HTML
+require("./app/routing/htmlRoutes")(app);
 
-// require("./routes/apiRoutes")(app);
-// require("./routes/htmlRoutes")(app);
-
-
+// Starts server and begins listening
 app.listen(PORT, function() {
   console.log("App listening on PORT: " + PORT);
 });
